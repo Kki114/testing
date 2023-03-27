@@ -9,7 +9,7 @@ send = sr1(pkt)
 router_mac = send[ARP].hwsrc
 router_ip = send[ARP].psrc
 
-ping_pkt = Ether(dst=router_mac)/IP(dst=router_ip)/ICMP()/b"Message Received"
+ping_pkt = Ether(dst=router_mac)/IP(dst=router_ip)/ICMP()/b"Message Confirmation"
 ping_pkt.show()
 send1 = sr1(ping_pkt)
 send1.show()
