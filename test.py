@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from scapy.all import srp1, sr1, Ether, IP, ICMP, ARP, DHCP
+from scapy.all import sr1, Ether, IP, ICMP, ARP
 
 pkt = ARP(op="who-has", pdst="192.168.128.1", hwdst="ff:ff:ff:ff:ff:ff")
 #pkt.show()
