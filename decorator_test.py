@@ -10,8 +10,10 @@ def timer(func):
     func()
     print(f"Function took {time.time() - x} seconds to run.")
 
+# "@timer" does the same thing as "timer(hello)" or "hello = timer(hello)"
 @timer
 def hello():
     print("Hello World!!!")
 
 #timer(hello)
+#hello = timer(hello)
