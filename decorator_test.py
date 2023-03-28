@@ -10,7 +10,8 @@ def timer(func):
     func()
     print(f"Function took {time.time() - x} seconds to run.")
 
+@timer
 def hello():
     print("Hello World!!!")
 
-timer(hello)
+#timer(hello)
