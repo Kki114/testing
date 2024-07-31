@@ -8,7 +8,10 @@ x = time.time()
 pkt = ARP(op="who-has", pdst="192.168.1.1", hwdst="ff:ff:ff:ff:ff:ff")
 pkt.show()
 broadcast = pkt[ARP].hwdst
+
+# Next line breaks code at 'sr1'
 send = sr1(pkt)
+
 router_mac = send[ARP].hwsrc
 router_ip = send[ARP].psrc
 print(f"Program took {time.time() - x} seconds to get response for ARP message.")
