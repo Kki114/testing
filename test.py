@@ -5,8 +5,8 @@ from scapy.all import sr1, Ether, IP, ICMP, ARP
 import time
 
 x = time.time()
-pkt = ARP(op="who-has", pdst="192.168.128.1", hwdst="ff:ff:ff:ff:ff:ff")
-#pkt.show()
+pkt = ARP(op="who-has", pdst="192.168.1.1", hwdst="ff:ff:ff:ff:ff:ff")
+pkt.show()
 broadcast = pkt[ARP].hwdst
 send = sr1(pkt)
 router_mac = send[ARP].hwsrc
