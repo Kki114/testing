@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# Testing some scapy functionality
 
 from scapy.all import sr1, Ether, IP, ICMP, ARP
 import time
