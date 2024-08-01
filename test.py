@@ -6,14 +6,16 @@ import time
 
 x = time.time()
 pkt = Ether()/ARP(op="who-has", pdst="192.168.1.1", hwlen=6, plen=4, psrc="192.168.1.102", hwdst="ff:ff:ff:ff:ff:ff")
-#pkt.show()
+pkt.show()
+
 # Copies broadcast address into "broadcast" variable
 broadcast = pkt[ARP].hwdst
 #print(broadcast)
 
 # Next line breaks code when attempting to send packet
-ARP.show()
 send = sr1(ARP)
+
+# Can't reach here to even see the response packet
 send.show()
 
 router_mac = send[ARP].hwsrc
